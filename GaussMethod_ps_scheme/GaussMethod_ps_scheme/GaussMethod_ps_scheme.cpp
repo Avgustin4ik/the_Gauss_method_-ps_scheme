@@ -7,15 +7,23 @@
 using namespace std;
 int main()
 {
-	const size_t m = 3;
-	const size_t n = 3;
-	int A[m][n] = {
-		{1,2,3},
-		{3,2,6},
-		{7,2,1}
+	const size_t m = 4;
+	const size_t n = 4;
+	float A[m][n] = {
+		{10,6,2,0},
+		{5,1,-2,4},
+		{3,5,1,-1},
+		{0,6,-2,2}
 	};
-	/*swap_rows<int, m, n>(A, 0, 2);*/
-	size_t I = find_max_of_selected_row<int, m, n>(A, 2);
+	float B[m][1] = {
+		25,14,10,8
+	};
+	float X[m][1] = {
+		1,1,1,1 
+	};
+
+	method_Gauss_SLAU<float,m,n>(A,B,X);
+
     return 0;
 
 }

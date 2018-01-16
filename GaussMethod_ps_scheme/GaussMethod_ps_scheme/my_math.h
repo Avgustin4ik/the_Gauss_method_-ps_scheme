@@ -1,4 +1,5 @@
 #pragma once
+
 template <typename T, size_t M, size_t N>
 void swap_rows(T (&A)[M][N], const size_t &first, const size_t &second)
 {
@@ -17,13 +18,13 @@ void swap_rows(T (&A)[M][N], const size_t &first, const size_t &second)
 	}
 }
 template <typename T, size_t M, size_t N>
-size_t find_max_of_selected_row(T(&A)[M][N], const size_t _j)
+size_t find_max_of_selected_column(T(&A)[M][N], const size_t &_j, const size_t &i_top)
 {
 	T max;
 	size_t i_max;
-	max = fabs(A[0][0]);
-	i_max = 0;
-	for (size_t i = 0; i < M; i++)
+	max = fabs(A[i_top][_j]);
+	i_max = i_top;
+	for (size_t i = i_top; i < M; i++)
 	{
 		if (fabs(A[i][_j]) > max)
 		{
@@ -33,9 +34,44 @@ size_t find_max_of_selected_row(T(&A)[M][N], const size_t _j)
 	}
 	return i_max;
 }
+template <typename T, size_t M, size_t N>
+T advanced_summ_of_row(T(&A)[M][N], T(&X)[M][1], const size_t &_i)
+{
+	T summ = 0;
+	for (size_t j = _i+1; j < N; j++)
+	{
+		summ = summ + A[_i][j] * X[j][0];
+	}
+	return summ;
+}
 
 template <typename T, size_t M, size_t N>
 void method_Gauss_SLAU(T(&A)[M][N], T(&B)[M][1], T(&X)[M][1])
 {
-
+	//*********direct order********
+	for (size_t k = 0; k < M-1; k++)
+	{
+		size_t index_max = find_max_of_selected_column(A, k, k);
+		swap_rows(A, index_max, k);
+		swap_rows(B, index_max, k);
+		for (size_t i = k+1; i < M; i++)
+		{
+			T mu = A[i][k] / A[k][k];
+			for (size_t j = 0; j < N; j++)
+			{
+				A[i][j] = A[i][j] - mu*A[k][j];
+			}
+			B[i][0] = B[i][0] - mu*B[k][0];
+		}
+		
+	}
+	//*********direct order********
+	//*********reverse order********
+	X[M - 1][0] = B[M - 1][0] / A[M - 1][N - 1];
+	for (int i = M-2; i >= 0; i--)
+	{
+		T summ = advanced_summ_of_row(A, X, i);
+		X[i][0] = (B[i][0] - summ) / A[i][i];
+	}
+	//*********reverse order********
 }

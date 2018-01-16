@@ -1,8 +1,6 @@
 ﻿  GaussMethod_ps_scheme.cpp
-d:\home\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\my_math.h(24): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-  d:\home\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(18): note: см. ссылку на создание экземпляров функции шаблон при компиляции "size_t find_max_of_selected_row<int,3,3>(T (&)[3][3],const size_t)"
-          with
-          [
-              T=int
-          ]
-  GaussMethod_ps_scheme.vcxproj -> D:\home\Git\the_Gauss_method_-ps_scheme\GaussMethod_ps_scheme\Debug\GaussMethod_ps_scheme.exe
+d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(30): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(30): warning C4305: инициализация: усечение из "double" в "float"
+d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(33): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
+d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(33): warning C4305: инициализация: усечение из "double" в "float"
+  GaussMethod_ps_scheme.vcxproj -> D:\Work Roman\Git\the_Gauss_method_-ps_scheme\GaussMethod_ps_scheme\Debug\GaussMethod_ps_scheme.exe
