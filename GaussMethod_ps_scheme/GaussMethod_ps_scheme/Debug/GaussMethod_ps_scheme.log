@@ -1,6 +1,0 @@
-﻿  GaussMethod_ps_scheme.cpp
-d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(30): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
-d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(30): warning C4305: инициализация: усечение из "double" в "float"
-d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(33): warning C4838: преобразование из "double" в "float" требует сужающего преобразования
-d:\work roman\git\the_gauss_method_-ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme\gaussmethod_ps_scheme.cpp(33): warning C4305: инициализация: усечение из "double" в "float"
-  GaussMethod_ps_scheme.vcxproj -> D:\Work Roman\Git\the_Gauss_method_-ps_scheme\GaussMethod_ps_scheme\Debug\GaussMethod_ps_scheme.exe
